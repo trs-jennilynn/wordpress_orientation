@@ -1,8 +1,19 @@
 <?php 
+
+	$section_id = "";
+	$bg_img = null;
 	
-		switch ( get_the_category() ):
-		
-		
+	$category = get_the_category();
+	
+		switch ( strtolower($category[0]->cat_name) ):
+			case "news":
+					$section_id = "notice";
+					$bg_img = "title_bt_01";
+				break;
+			case "events":
+					$section_id = "divelog";
+					$bg_img = "title_bt_01";
+				break;
 		
 		endswitch;
 
@@ -11,7 +22,7 @@
 
 
 
-<div id="notice" class="section">
+<div id="<?php echo $section_id; ?>" class="section">
 	<div class="section-header">
 		<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/content/title_bt_01.png" /></a>
 		<div class="DivHelper"></div>

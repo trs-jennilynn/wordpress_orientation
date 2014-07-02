@@ -1,6 +1,6 @@
 <div id="notice" class="section">
 	<div class="section-header">
-		<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/content/title_bt_01.png" /></a>
+		<a href="<?php echo get_category_link(2); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/content/title_bt_01.png" /></a>
 		<div class="DivHelper"></div>
 	</div>
 	<div class="section-content">	
