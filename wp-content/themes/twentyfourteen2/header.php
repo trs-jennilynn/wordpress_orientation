@@ -37,7 +37,7 @@
 				<div id="name"><?php bloginfo('name'); ?></div>
 				<div id="logo"><a href="<?php bloginfo("siteurl"); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/header/tropara_logo.png" /></a></div>
 				<div id="fish"></div>
-				<div id="button"><a href="<?php echo get_category_link(2); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/header/header_bt.png" /></a></div>
+				<div id="button"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/header/header_bt.png" /></a></div>
 			</div>
 		</div>
 		

@@ -140,6 +140,7 @@ body {
 		#menu-nav li div {
 			height: 100%;
 			width: 100%;
+			cursor: pointer;
 		 }
  
 	#menu-nav #about {background: transparent url(images/header/menu_part/about_menu.png) no-repeat center center;}
