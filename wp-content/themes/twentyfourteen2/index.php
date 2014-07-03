@@ -5,7 +5,12 @@
 			<div class="content">
 		
 				<div id="image-slider">
-					<?php if ( function_exists( "easingsliderlite" ) ) { easingsliderlite(); } ?>
+					<?php if ( function_exists( "easingsliderlite" ) ) { 
+							easingsliderlite(); 
+						} else {
+							_e("Easing slider lite plug-in is not installed.<br />Please download it from wordpress:<br /><a href='https://wordpress.org/plugins/easing-slider/'>https://wordpress.org/plugins/easing-slider/</a>");
+						}	
+					?>
 				</div>
 				
 				<div class="contents">

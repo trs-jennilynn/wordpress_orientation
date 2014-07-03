@@ -50,6 +50,12 @@ body {
  	border: 0;
  }
  
+ a {
+	color: #007acc;
+	text-decoration: none;
+}
+ 
+ 
 /**
  * 2.0 Header
  * --------------------------------------------------
@@ -331,11 +337,7 @@ body {
 			vertical-align: top;
 			width: 70px;
 		 }
- 
-		.section .section-content .row .title a {
-			color: #007acc;
-			text-decoration: none;
-		 }
+
  
 		.section .section-content .row .detail.title {
 			border-bottom: 1px solid #0074bd;
@@ -347,11 +349,6 @@ body {
 			display: block;
 			width: 560px;
 		 }
- 
-			.section .section-content .row .detail.excerpt a {
-				color: #007acc;
-				text-decoration: none;
-			 }
  
 		.section .section-content .row .cell.paragraph {
 			color: #424242;
@@ -378,6 +375,19 @@ body {
 		margin: 0 auto;
 		width: 660px;
 	 }
+ 
+ 
+.section .section-content .pagination{
+	text-align: center;
+	width: 100%;
+}
+.section .section-content .pagination div{
+	display: inline;
+}
+ 
+.section .section-content .pagination .pipe {
+	color: #007acc;
+}
  
 /**
  * 6.0 Footer
@@ -473,3 +483,47 @@ body {
  }
  
  
+ 
+ 
+/**
+* 7.0 About Page
+* --------------------------------------------------
+*/
+ 
+#about-page .left-nav-bar {
+	width: 201px;
+	min-height: 100px;
+	margin: 15px 0 0 10px;
+	padding: 0;
+}
+#about-page .section .section-content ul {
+	padding: 0;
+}
+#about-page .left-nav-bar.section .section-content li.row {
+	list-style:none;
+	width:  201px;
+	padding-left: 40px;
+	color: #007acc;
+	font-weight: bold;
+	background: transparent url(images/about/bullet_fish.png) no-repeat left center;
+}
+
+#about-page	 .left-nav-bar.section .section-content .divider {
+		width: 170px;
+		list-style: none;
+}
+
+#about-page	.section .section-content .row .gallery img {
+		display: inline-block;
+		width: 200px;
+		height: 150px;
+		padding: 15px 10px 10px 10px;
+}
+#about-page	.section .section-content .row .divider {
+		padding:0;
+		margin:0;
+}
+
+#about-page .about-content {
+	width: 660px;
+}

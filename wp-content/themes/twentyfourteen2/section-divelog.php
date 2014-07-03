@@ -1,12 +1,17 @@
+<?php 
+	$idObj = get_category_by_slug('events');
+	$id = $idObj->term_id;
+?>
+
 <div id="divelog" class="section">
 	<div class="section-header">
-		<a href="<?php echo get_category_link(3); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/content/title_bt_01.png" /></a>
+		<a href="<?php echo get_category_link($id); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/content/title_bt_01.png" /></a>
 		<div class="DivHelper"></div>
 	</div>
 	<div class="section-content">	
 		<div class="container">
 		<?php 
-			$query_events = new WP_Query( 'cat=3&posts_per_page='.MAXIMUM_NO_OF_HOME_POSTS);
+			$query_events = new WP_Query( 'cat='.$id.'&posts_per_page='.MAXIMUM_NO_OF_HOME_POSTS);
 			$i = 1;
 			if ( $query_events->have_posts() ):
 				while ( $query_events->have_posts() ): $query_events->the_post(); ?>

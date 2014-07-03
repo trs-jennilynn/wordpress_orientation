@@ -45,6 +45,19 @@
 					endif;
 				$tropara_post_counter++;
 				endwhile;
+				
+				$prev = get_previous_posts_link("<<");
+				$next = get_next_posts_link(">>");
+				
+			?>
+				<div class="pagination">
+					<div class="prev"><?php echo $prev; ?></div>
+					<?php if ( !empty($prev) && !empty($next) ): ?>
+					<div class="pipe">|</div>
+					<?php endif; ?>
+					<div class="next"><?php echo $next; ?></div>
+				</div>
+		<?php 
 			endif;
 		?>
 		</div>
