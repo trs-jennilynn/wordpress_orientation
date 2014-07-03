@@ -35,7 +35,7 @@
 					<div class="cell details">
 						<div class="detail title"><a href="<?php the_permalink(); ?>"><?php echo mb_strimwidth(get_the_title() , 0, 75, '...'); ?></a></div>
 						<div class="detail excerpt">
-							<?php echo mb_strimwidth(get_the_content(), 0, 320, '... <a href="'.get_the_permalink().'">'.__("Read More").'</a>'); ?>
+							<?php echo mb_strimwidth(get_the_content(), 0, 320, '...'); ?>  <a href="<?php echo get_the_permalink(); ?>"><?php _e("View post"); ?></a>
 						</div>
 					</div>
 				</div>
