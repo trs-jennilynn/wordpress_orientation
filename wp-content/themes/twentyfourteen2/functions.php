@@ -3,7 +3,11 @@
 	// The maximum number of results to be shown for news and events
 	define('MAXIMUM_NO_OF_HOME_POSTS',5);
 
-
+	// header background images for pages path
+	$pages_header_bg_img = array(
+			"about" 		=> 	"images/pages/about/about_title.png",
+			"liloan-guide" 	=> 	"images/pages/liloan_guide/liloan_guide_title.png"
+	);
 
 
 	/**
