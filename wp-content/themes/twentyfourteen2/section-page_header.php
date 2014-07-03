@@ -2,7 +2,7 @@
 get_header();
 ?>
 		<div id="body-wrapper">	
-			<div class="content" id="about-page">
+			<div class="content page">
 				
 				<div class="contents">
 					<div id="content-left">

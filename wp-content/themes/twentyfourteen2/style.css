@@ -38,6 +38,7 @@ html,body {
 body {
 	background: #f5f1d0 url(images/content/main_visual/main_visual_bg.png) no-repeat center 145px;
 	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+ 	color: #424242;
  }
  
 .DivHelper {
@@ -486,44 +487,46 @@ body {
  
  
 /**
-* 7.0 About Page
+* 7.0 Page
 * --------------------------------------------------
 */
  
-#about-page .left-nav-bar {
+.page .left-nav-bar {
 	width: 201px;
 	min-height: 100px;
 	margin: 15px 0 0 10px;
 	padding: 0;
 }
-#about-page .section .section-content ul {
+.page .section .section-content ul {
 	padding: 0;
 }
-#about-page .left-nav-bar.section .section-content li.row {
+.page .left-nav-bar.section .section-content li.row {
 	list-style:none;
-	width:  201px;
+	width:  135px;
 	padding-left: 40px;
 	color: #007acc;
 	font-weight: bold;
+	margin-left:10px;
 	background: transparent url(images/pages/about/bullet_fish.png) no-repeat left center;
+	
 }
 
-#about-page	 .left-nav-bar.section .section-content .divider {
+.page	 .left-nav-bar.section .section-content .divider {
 		width: 170px;
 		list-style: none;
 }
 
-#about-page	.section .section-content .row .gallery img {
+.page	.section .section-content .row .gallery img {
 		display: inline-block;
 		width: 200px;
 		height: 150px;
 		padding: 15px 10px 10px 10px;
 }
-#about-page	.section .section-content .row .divider {
+.page	.section .section-content .row .divider {
 		padding:0;
 		margin:0;
 }
 
-#about-page .about-content {
+.page .page-content {
 	width: 660px;
 }
