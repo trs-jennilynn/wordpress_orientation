@@ -24,8 +24,8 @@
 	<body>
 		<div id="menu-wrapper">
 			<ul id="menu-nav">
-				<li id="about"><div><a href="<?php echo get_permalink( get_page_by_path( 'about' ) ); ?>"></a></div></li>
-				<li id="resort"><div><a href="#resort"></a></div></li>
+				<li id="about"><div><a href="<?php echo get_permalink(getPageIDFromTemplate("page-templates/page_about-page.php") ); ?>"></a></div></li>
+				<li id="resort"><div><a href="<?php echo get_permalink(getPageIDFromTemplate("page-templates/page_accomodition-page.php") ); ?>"></a></div></li>
 				<li id="diving"><div><a href="#diving"></a></div></li>
 				<li id="notice"><div><a href="#notice"></a></div></li>
 				<li id="guide"><div><a href="#guide"></a></div></li>

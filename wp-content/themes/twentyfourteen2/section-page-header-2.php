@@ -9,7 +9,7 @@ get_header();
 						<div id class="left-nav-bar section">
 							<div class="section-content">
 								<div class="container">
-									<?php get_template_part("section","page_sidebar"); ?>
+									<?php get_template_part("section","page-sidebar-2"); ?>
 								</div>
 							</div>
 						</div>

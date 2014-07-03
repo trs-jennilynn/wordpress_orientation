@@ -3,11 +3,6 @@
 	// The maximum number of results to be shown for news and events
 	define('MAXIMUM_NO_OF_HOME_POSTS',5);
 
-	// header background images for pages path
-	$pages_header_bg_img = array(
-			"about" 		=> 	"images/pages/about/about_title.png",
-			"liloan-guide" 	=> 	"images/pages/liloan_guide/liloan_guide_title.png"
-	);
 
 
 	/**
@@ -16,8 +11,7 @@
 	 */
 	function load_scripts(){
 		wp_enqueue_style("main-style", get_stylesheet_uri());
-		wp_enqueue_script("main-script", get_template_directory_uri()."/scripts/script.js",array("jquery"),TRUE);
-		
+		wp_enqueue_script("main-script", get_template_directory_uri()."/scripts/script.js",array("jquery"),TRUE);		
 	
 	}
 	
@@ -35,4 +29,24 @@
 	
 	add_action("wp_head","adjust_header");
 	add_action("wp_enqueue_scripts","load_scripts");
+	
+	
+	
+	function getPageIDFromTemplate($template_path){
+		$args = array(
+				'posts_per_page' => '1',
+				'post_type' => 'page',
+				'post_status' => 'publish',
+				'meta_query' => array(
+						array(
+								'key' => '_wp_page_template',
+								'value' => $template_path,
+						)
+				)
+		);
+		$my_query = new WP_Query($args);
+		$pid = $my_query->get_posts();
+		return $pid[0]->ID;
+	}
+	
 	

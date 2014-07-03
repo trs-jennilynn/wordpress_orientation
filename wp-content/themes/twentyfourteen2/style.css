@@ -156,7 +156,7 @@ body {
  
 	#menu-nav #about {background: transparent url(images/header/menu_part/about_menu.png) no-repeat center center;}
  
-	#menu-nav #resort {background: transparent url(images/header/menu_part/resort_menu.png) no-repeat center center;}
+	#menu-nav #resort {background: transparent url(images/header/menu_part/facility_menu.png) no-repeat center center;}
  
 	#menu-nav #diving {background: transparent url(images/header/menu_part/diving_menu.png) no-repeat center center;}
  
@@ -507,7 +507,7 @@ body {
 	color: #007acc;
 	font-weight: bold;
 	margin-left:10px;
-	background: transparent url(images/pages/about/bullet_fish.png) no-repeat left center;
+	background: transparent url(images/pages/fish_bullet.png) no-repeat left center;
 	
 }
 
