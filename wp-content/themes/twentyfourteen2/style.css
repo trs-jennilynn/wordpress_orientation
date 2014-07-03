@@ -160,7 +160,7 @@ body {
  * --------------------------------------------------
  */
 #body-wrapper {
-	background: transparent url(images/content/main_visual/main_visual_bg.png) no-repeat center 150px;
+	background: transparent url(images/content/main_visual/main_visual_bg.png) no-repeat center -40px;
 	margin-bottom: 120px;
 	min-height: 800px;
 	padding-top: 20px;
