@@ -46,8 +46,8 @@
 				$tropara_post_counter++;
 				endwhile;
 				
-				$prev = get_previous_posts_link("<<");
-				$next = get_next_posts_link(">>");
+				$prev = get_previous_posts_link("<< ".__("Newer"));
+				$next = get_next_posts_link(__("Older")." >>");
 				
 			?>
 				<div class="pagination">

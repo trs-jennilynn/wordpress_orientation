@@ -1,12 +1,12 @@
 <?php
 /*
- * Template Name: About Page Template
+ * Template Name: Liloan Guide Page Template
  * Description: A page template specifically designed for the about page
  */
 	get_template_part("section","page_header");
 ?>
 						<div id="about" class="section">
-							<div class="section-header" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/pages/about/about_title.png);">
+							<div class="section-header" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/pages/liloan_guide/liloan_guide_title.png);">
 							<div class="DivHelper"></div>
 							</div>
 							<div class="section-content">	
