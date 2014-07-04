@@ -11,8 +11,8 @@
 	 */
 	function load_scripts(){
 		wp_enqueue_style("main-style", get_stylesheet_uri());
+		wp_enqueue_style("qanda-style", get_template_directory_uri()."/styles/q-and-a-style.css");
 		wp_enqueue_script("main-script", get_template_directory_uri()."/scripts/script.js",array("jquery"),TRUE);		
-	
 	}
 	
 	/**
@@ -29,6 +29,32 @@
 	
 	add_action("wp_head","adjust_header");
 	add_action("wp_enqueue_scripts","load_scripts");
+	
+	
+	
+	function qanda_func( $atts, $content = null){
+		$vals = array("question","answer");
+		if ( $atts["type"]==null && !in_array($atts["type"],$vals) ) return;
+		$ini = strtoupper(substr($atts["type"], 0,1));
+		
+		$compensate = null;
+		if ( $atts["type"]=="answer" )
+			$compensate = 'style="margin-top: -20px;"';
+		
+		return <<<ECHO
+<div class="qanda">
+	<div class="{$atts['type']}" $compensate>
+		<div class="bullet">{$ini}.</div>
+		<div class="text">{$content}</div>
+	</div>
+</div>
+ECHO;
+	}
+	
+	add_shortcode( 'QandA', 'qanda_func' );
+	
+	
+	
 	
 	
 	/**
