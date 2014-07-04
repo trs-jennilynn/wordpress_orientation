@@ -105,14 +105,14 @@ jQuery(document).ready(function($) {
       //=======================
 
       //Triggering Navigation as Sticky when scrolled to second section:
-      $('.navigation-fadeIn').waypoint(function (event, direction) {
+      /*$('.navigation-fadeIn').waypoint(function (event, direction) {
           if (direction === 'down') {
-            $('#masthead').css('top','0px');
+            //$('#masthead').css('top','0px');
           } else {
               $('#masthead').css('top','-90px');
           }
-      }, { offset: 10 });
-
+      }, { offset: 10 });*/
+      $('#masthead').css('top','0px');
 
       
   	

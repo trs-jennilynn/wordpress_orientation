@@ -1841,6 +1841,7 @@ div#portfolio_thumbs ul li div.item_info p {
     .flickr-thumb{
         width: 33.3%;
     }
+
 }
 
 @media (max-width: 480px) {
@@ -1998,6 +1999,9 @@ div#portfolio_thumbs ul li div.item_info p {
     .flickr-thumb{
         width: 50%;
     }
+    
+
+    
 }
 
 @media (max-width: 360px) {
@@ -2155,6 +2159,9 @@ div#portfolio_thumbs ul li div.item_info p {
     .flickr-thumb{
         width: 50%;
     }
+    
+
+    
 }
 
 @media (max-width: 320px) {
@@ -2315,6 +2322,8 @@ div#portfolio_thumbs ul li div.item_info p {
     .flickr-thumb{
         width: 50%;
     }
+    
+
 }
 
 /* ===================================*/
@@ -2577,3 +2586,44 @@ pre{padding: 20px;}
     text-align: center;
     float: none;
 }
+
+
+#mast-nav li {
+	vertical-align: top;
+	border-left: 1px solid #545454;
+	color: #545454;
+	text-align: center;
+	padding: 0 5px;
+}
+
+#site-logo {
+	margin: 20px;
+}
+#mast-nav li a{
+	display: block;
+}
+
+#mast-nav li .desc {
+	text-align: center;
+	padding: 0;
+	margin: 0;
+	font-size: 12px;
+}
+
+.span4 {
+	width: 620px;
+}
+
+.site-desc {
+	position: absolute;
+	display: inline-block;
+	height: 100%;
+	top: 40px;
+	left: 350px;
+	color: #545454;
+}
+#mast-nav {
+	display: inline-block;
+	float: right;
+}
+

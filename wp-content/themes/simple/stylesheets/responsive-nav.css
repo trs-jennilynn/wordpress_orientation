@@ -43,6 +43,8 @@
   #nav-toggle {
     display: none;
   }
+  
+  
 }
 
 
@@ -199,4 +201,7 @@ font-family:"Open_Sans_R";
     *width: 24.9%; /* IE7 Hack */
     _width: 19%; /* IE6 Hack */
   }
+       
+  
 }
+

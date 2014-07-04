@@ -61,6 +61,7 @@
             </article>
 
             <article class="span8 credits">
+             <div class="site-desc"><?php echo bloginfo("description"); ?></div>
               <?php custom_menu(); ?>
             </article>
             

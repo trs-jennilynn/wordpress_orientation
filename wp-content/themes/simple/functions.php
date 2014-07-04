@@ -236,8 +236,16 @@ function custom_menu()
 							$identifyClass = "not_onepage";
 							$small_title  = strtolower(preg_replace('/\s+/', '-', $men->title));
 						}
+						
+						$text = explode("|",$men->title,2);
+						if ( count($text)>1 ) {
+							$text = $text[0]."</a><span class=\"desc\">".$text[1]."</span>";
+						} else {
+							$text = $men->title.'</a>';
+						}
+						
 						$return .= '<li>';
-						$return .= '<a href="'. $href .'" class="'.$identifyClass.'" data-soffset="0">'. $men->title .'</a>';
+						$return .= '<a href="'. $href .'" class="'.$identifyClass.'" data-soffset="0">'. $text ;
 						
 						$has_sub_menu = 0;
 						foreach ( $menunu as $submenu ){
@@ -358,8 +366,17 @@ function custom_mobile_menu()
 							$identifyClass = "not_onepage";
 							$small_title  = strtolower(preg_replace('/\s+/', '-', $men->title));
 						}
+						
+						
+						$text = explode("|",$men->title);
+						if ( count($text)>1 ) {
+							$text = $text[0];
+						} else {
+							$text = $men->title;
+						}
+						
 						$return .= '<li>';
-						$return .= '<a href="'. $href .'" class="'.$identifyClass.'" data-soffset="0">'. $men->title .'</a>';
+						$return .= '<a href="'. $href .'" class="'.$identifyClass.'" data-soffset="0">'. $text .'</a>';
 						$return .= '</li>' . "\n";
 						$has_sub_menu = 0;
 						foreach ( $menunu as $submenu ){
@@ -585,5 +602,7 @@ function _comments_open($open) {
 	return $open;
 }
 
+
+	
 
 ?>
