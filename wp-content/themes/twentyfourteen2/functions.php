@@ -31,8 +31,14 @@
 	add_action("wp_enqueue_scripts","load_scripts");
 	
 	
-	
-	function getPageIDFromTemplate($template_path){
+	/**
+	 *	Retrieves the ID of the first post using the given custom page template 
+	 * 
+	 * Params
+	 * 	@string template_name the name of the custom page template which can be found under /page-templates directory 
+	 * 
+	 */
+	function getPageIDFromTemplate($template_name){
 		$args = array(
 				'posts_per_page' => '1',
 				'post_type' => 'page',
@@ -40,12 +46,13 @@
 				'meta_query' => array(
 						array(
 								'key' => '_wp_page_template',
-								'value' => $template_path,
+								'value' => 'page-templates/page_'.$template_name.'.php',
 						)
 				)
 		);
 		$my_query = new WP_Query($args);
 		$pid = $my_query->get_posts();
+		unset($my_query);
 		return $pid[0]->ID;
 	}
 	

@@ -86,7 +86,8 @@ a {
 	display: block;
 	font-size: 12px;
 	padding: 5px;
-	width: 370px;
+	width: 100%;
+	text-align: left;
  }
  
 #logo {
@@ -423,30 +424,28 @@ a {
 	#footer-link-groups > li {
 		font-size: 16px;
 		padding-bottom: 20px;
+		vertical-align: top;
 		padding-right: 25px;
+		display: inline-block;
+		width: 154px;
+		white-space: normal;
 	 }
  
-		#footer-link-groups > li:before {content: "• ";}
+	#footer-link-groups > li:before {content: "• ";}
  
 #footer-wrapper .container .contents a {
 	color: inherit;
-	display: block;
-	font-size: 13px;
-	font-weight: normal;
+	font-size: 12px;
+	font-weight: lighter;
 	padding: 5px 0 5px 20px;
 	text-decoration: underline;
  }
- 
-#footer-link-group-1 {display: inline-block;}
- 
-#footer-link-group-2 {display: inline-block;}
- 
-#footer-link-group-3 {display: inline-block;}
- 
-#footer-link-group-4 {display: inline-block;}
- 
-#footer-link-group-5 {display: inline-block;}
- 
+
+#footer-wrapper .container .contents a.sub {
+	display: block;
+}
+
+
 /**
  * 6.2 Footer Logo
  * --------------------------------------------------

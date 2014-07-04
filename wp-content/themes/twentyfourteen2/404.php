@@ -10,7 +10,15 @@
 					</div>
 					
 					<div id="content-right">
-						<?php _e('Error 404: Page not found.'); ?>
+						<div class="section-content">	
+								<div class="container">
+									<div class="row">
+										<div class="page-content">
+										<?php _e("エラー404：ページが見つかりません。")?>
+										</div>
+									</div>
+								</div>
+							</div>
 					</div>
 				</div>
 		

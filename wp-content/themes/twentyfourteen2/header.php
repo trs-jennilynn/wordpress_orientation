@@ -24,8 +24,8 @@
 	<body>
 		<div id="menu-wrapper">
 			<ul id="menu-nav">
-				<li id="about"><div><a href="<?php echo get_permalink(getPageIDFromTemplate("page-templates/page_about-page.php") ); ?>"></a></div></li>
-				<li id="resort"><div><a href="<?php echo get_permalink(getPageIDFromTemplate("page-templates/page_accomodition-page.php") ); ?>"></a></div></li>
+				<li id="about"><div><a href="<?php echo get_permalink(getPageIDFromTemplate("about") ); ?>"></a></div></li>
+				<li id="resort"><div><a href="<?php echo get_permalink(getPageIDFromTemplate("accomodition") ); ?>"></a></div></li>
 				<li id="diving"><div><a href="#diving"></a></div></li>
 				<li id="notice"><div><a href="#notice"></a></div></li>
 				<li id="guide"><div><a href="#guide"></a></div></li>
@@ -34,7 +34,7 @@
 		</div>
 		<div id="header-wrapper">
 			<div id="header">
-				<div id="name"><?php bloginfo('name'); ?></div>
+				<div id="name"><?php bloginfo("name"); ?></div>
 				<div id="logo"><a href="<?php bloginfo("siteurl"); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/header/tropara_logo.png" /></a></div>
 				<div id="fish"></div>
 				<div id="button"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/header/header_bt.png" /></a></div>
