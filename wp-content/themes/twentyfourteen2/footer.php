@@ -35,7 +35,7 @@
 						</li>
 						<br/>
 						<li id="footer-link-group-4">
-							<a href="#"><?php _e("Q&A"); ?></a>
+							<a href="<?php echo get_permalink( getPageIDFromTemplate("qa") ); ?>"><?php _e("Q&A"); ?></a>
 						</li>			
 						<li id="footer-link-group-5">
 							<a href="#"><?php _e("ー丿ゾー卜"); ?></a>
