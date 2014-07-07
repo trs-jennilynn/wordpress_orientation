@@ -146,7 +146,7 @@ a, a:hover {
     position: fixed;
     top: -90px;
     width: 100%;
-    background: rgba(255,255,255,0.9);
+    background: rgba(255,255,255,1);
     z-index: 999 !important;
     transition: all .5s ease;
     -moz-transition: all .5s ease;
@@ -2603,6 +2603,7 @@ pre{padding: 20px;}
 #mast-nav li a{
 	display: block;
 	text-transform: capitalize;
+	font-size: 15px;
 }
 
 #mast-nav li .desc {
@@ -2633,7 +2634,6 @@ pre{padding: 20px;}
 #top-page {
 	top: 95px;
 }
-
 
 
 .horizontal-gallery img{
