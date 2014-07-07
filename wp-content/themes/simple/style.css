@@ -1394,7 +1394,7 @@ div#portfolio_thumbs ul li div.item_info p {
     }
 
     header + .page-section {
-        margin-top: 450px;
+        /*margin-top: 450px;*/
     }
 
     .instagram-thumb {
@@ -1414,7 +1414,7 @@ div#portfolio_thumbs ul li div.item_info p {
     }
 
     header + .page-section {
-        margin-top: 360px;
+        /*margin-top: 360px;*/
     }
 
     .instagram-thumb {
@@ -1433,7 +1433,7 @@ div#portfolio_thumbs ul li div.item_info p {
     }
 
     header + .page-section {
-        margin-top: 250px;
+        /*margin-top: 250px;*/
     }
 
      .instagram-thumb {
@@ -2591,7 +2591,7 @@ pre{padding: 20px;}
 
 #mast-nav li {
 	vertical-align: top;
-	border-left: 1px solid #545454;
+	border-left: 1px solid #CCC6B9;
 	color: #545454;
 	text-align: center;
 	padding: 0 5px;
@@ -2603,7 +2603,8 @@ pre{padding: 20px;}
 #mast-nav li a{
 	display: block;
 	text-transform: capitalize;
-	font-size: 15px;
+	font-weight:bold;
+	font-size:16
 	font-family:'Simplified Arabic', Arial, Helvetica, sans-serif
 }
 
@@ -2611,7 +2612,7 @@ pre{padding: 20px;}
 	text-align: center;
 	padding: 0;
 	margin: 0;
-	font-size: 12px;
+	font-size:9;
 	font-family:"メイリオ",Meiryo,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",Osaka,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
 }
 
