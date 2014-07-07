@@ -2601,18 +2601,22 @@ pre{padding: 20px;}
 	margin: 20px;
 }
 #mast-nav li a{
+	line-height:18px;
 	display: block;
 	text-transform: capitalize;
 	font-weight:bold;
-	font-size:16
-	font-family:'Simplified Arabic', Arial, Helvetica, sans-serif
+	font-size:16px;
+	font-family:'Simplified Arabic', Arial, Helvetica, sans-serif;
 }
 
-#mast-nav li .desc {
+#mast-nav li a .desc {
+	display: block;
 	text-align: center;
 	padding: 0;
 	margin: 0;
-	font-size:9;
+	text-transform: none;
+	font-weight:normal;
+	font-size:9px;
 	font-family:"メイリオ",Meiryo,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",Osaka,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
 }
 

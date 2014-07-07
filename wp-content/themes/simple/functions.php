@@ -239,7 +239,7 @@ function custom_menu()
 						
 						$text = explode("|",$men->title,2);
 						if ( count($text)>1 ) {
-							$text = $text[0]."</a><span class=\"desc\">".$text[1]."</span>";
+							$text = $text[0]."<span class=\"desc\">".$text[1]."</span></a>";
 						} else {
 							$text = $men->title.'</a>';
 						}
