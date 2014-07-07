@@ -231,7 +231,7 @@ jQuery(document).ready(function($) {
   
   	$("#mast-nav li a").click(function() {
 		var _scroll_top = $($(this).attr("href")).offset().top;
-		$("html,body").animate({scrollTop:_scroll_top-95},"slow","swing");
+		$("html,body").stop().animate({scrollTop:_scroll_top-95},"slow","swing");
 		return false;
 	});
   
