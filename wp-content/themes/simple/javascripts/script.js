@@ -226,6 +226,17 @@ jQuery(document).ready(function($) {
   $('#searchform label').addClass('hidden');
   $('.blog_pagination a').addClass('btn btn-simple highlight-on-hover');
 
+  
+  
+  
+  	$("#mast-nav li a").click(function() {
+		var _scroll_top = $($(this).attr("href")).offset().top;
+		$("html,body").animate({scrollTop:_scroll_top},"slow","swing");
+		return false;
+	});
+  
+  
+  
 });
 
 
