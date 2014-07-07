@@ -4,9 +4,9 @@
 	<section class="container-fluid">
 	    <div class="row-fluid">
 	            <article class="span6 credits text-left">
-	              <h3>@twitter</h3>
+	              <!-- <h3>@twitter</h3>
 	              <span class="liner">&nbsp;</span>
-	              <article id="ticker" class="query"></article>
+	              <article id="ticker" class="query"></article> -->
 	            </article>
 
 
