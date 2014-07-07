@@ -72,7 +72,7 @@ jQuery(document).ready(function($) {
       $(window).stellar({
           responsive: false,
           horizontalScrolling: false, // from true
-          parallaxBackgrounds: true,
+          parallaxBackgrounds: false, // true
           parallaxElements: true,
           hideDistantElements: true
       });
