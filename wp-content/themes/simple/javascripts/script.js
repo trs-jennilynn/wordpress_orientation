@@ -114,6 +114,8 @@ jQuery(document).ready(function($) {
       }, { offset: 10 });*/
       $('#masthead').css('top','0px');
 
+     
+      
       
   	
   });
@@ -226,8 +228,19 @@ jQuery(document).ready(function($) {
   $('#searchform label').addClass('hidden');
   $('.blog_pagination a').addClass('btn btn-simple highlight-on-hover');
 
+  
+  
+ 
+	
+  $("#mast-nav li").find("a").click(function(){
+		var offset_top = Math.floor($($(this).attr("href")).offset().top);
+		$("body,html").stop().animate({scrollTop:offset_top},"slow","swing");
+		return false;
+	});
+  
+  
+  
 });
-
 
 
 
