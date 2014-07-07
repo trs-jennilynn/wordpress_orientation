@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 06, 2014 at 11:48 PM
+-- Generation Time: Jul 07, 2014 at 12:10 AM
 -- Server version: 5.1.41
 -- PHP Version: 5.3.1
 
@@ -239,7 +239,7 @@ CREATE TABLE IF NOT EXISTS `wp_options` (
   `autoload` varchar(20) NOT NULL DEFAULT 'yes',
   PRIMARY KEY (`option_id`),
   UNIQUE KEY `option_name` (`option_name`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=405 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=407 ;
 
 --
 -- Dumping data for table `wp_options`
@@ -247,7 +247,7 @@ CREATE TABLE IF NOT EXISTS `wp_options` (
 
 INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`) VALUES
 (1, 'siteurl', 'http://orient.localhost', 'yes'),
-(2, 'blogname', '', 'yes'),
+(2, 'blogname', 'セブ島で、美容留学　アジア　ビューティーカレッジ(Asia BeautyCollege) | セブ島で美容留学', 'yes'),
 (3, 'blogdescription', 'セブ島で、美容留学', 'yes'),
 (4, 'users_can_register', '0', 'yes'),
 (5, 'admin_email', 'trd.paolo@gmail.com', 'yes'),
@@ -701,7 +701,7 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (404, 186, 'page_bgtrans', '.5'),
 (405, 186, 'parallax_speed', '1.5'),
 (406, 188, '_edit_last', '1'),
-(407, 188, '_edit_lock', '1404715678:1'),
+(407, 188, '_edit_lock', '1404716885:1'),
 (408, 188, '_wp_page_template', 'default'),
 (409, 188, 'one_page', 'yes'),
 (410, 188, 'page_bgcolor', '#FFFFFF'),
