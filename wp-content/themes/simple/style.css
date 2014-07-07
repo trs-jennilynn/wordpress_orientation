@@ -2602,6 +2602,7 @@ pre{padding: 20px;}
 }
 #mast-nav li a{
 	display: block;
+	text-transform: capitalize;
 }
 
 #mast-nav li .desc {
@@ -2631,4 +2632,15 @@ pre{padding: 20px;}
 
 #top-page {
 	top: 95px;
+}
+
+
+
+.horizontal-gallery img{
+	display: inline-block;
+}
+
+.horizontal-gallery div{
+	display: inline-block;
+	padding: 5px;
 }
