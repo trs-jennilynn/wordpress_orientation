@@ -234,7 +234,9 @@ jQuery(document).ready(function($) {
   
   	// set the proper height of top page
   	$(".the-top-page").css("height",$(window).height()+5);
-  
+  	$("#top-page").css("background-size","cover");
+  	
+  	
   
   	$("#mast-nav li a").click(function() {
 		var _scroll_top = $($(this).attr("href")).offset().top;
