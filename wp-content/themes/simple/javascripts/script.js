@@ -244,7 +244,7 @@ jQuery(document).ready(function($) {
 		$menu_item = $("#mast-nav li a");
   
 	
-  	$(".the-top-page").css("height",$(window).height()+5);
+  	$(".the-top-page").css("height",$(window).height()+5).css("overflow","hidden");
   	
   	
   	function both_head(){
