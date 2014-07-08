@@ -114,6 +114,8 @@ jQuery(document).ready(function($) {
       }, { offset: 10 });*/
       $('#masthead').css('top','0px');
 
+     
+      
       
   	
   });
@@ -227,7 +229,7 @@ jQuery(document).ready(function($) {
   $('.blog_pagination a').addClass('btn btn-simple highlight-on-hover');
 
   
-  
+ 
   
   	$("#mast-nav li a").click(function() {
 		var _scroll_top = $($(this).attr("href")).offset().top;
@@ -240,12 +242,8 @@ jQuery(document).ready(function($) {
 		return false;
 	});
   
-  	
-
-  	
-  	
+  
 });
-
 
 
 
