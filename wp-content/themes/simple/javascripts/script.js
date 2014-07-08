@@ -235,7 +235,7 @@ jQuery(document).ready(function($) {
   	$("#mast-nav li a").click(function() {
 		var _scroll_top = $($(this).attr("href")).offset().top;
 
-		$("html,body").animate({scrollTop:_scroll_top-35},"slow","swing");
+		$("html,body").animate({scrollTop:_scroll_top-95},"slow","swing");
 		return false;
 	});
   
@@ -266,6 +266,12 @@ jQuery(document).ready(function($) {
   		$(this).execEffects();
   	});
   	
+    
+    $(window).scroll(function() {
+		if ( $(this).scrollTop()<5 ) {
+			$(this).scrollTop(5);
+		}
+	});
   	
   	
 });
@@ -332,7 +338,8 @@ jQuery(document).ready(function($) {
         return classes;
     };
 	
-	
+
+    
 })(jQuery);
 
 
