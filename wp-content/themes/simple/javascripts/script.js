@@ -243,6 +243,15 @@ jQuery(document).ready(function($) {
 	});
   
   
+	var $mast_head = $("#masthead"),$top_page = $("#top-page");
+  	
+  	$(window).resize(function() {
+  		if($mast_head.is(":visible"))
+  			$top_page.css("top","95px");
+  		else
+  			$top_page.css("top","35px");
+	});
+
 });
 
 
