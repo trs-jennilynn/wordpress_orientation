@@ -2597,18 +2597,7 @@ pre{padding: 20px;}
 	padding: 0 5px;
 }
 
-#site-logo {
-	margin: 20px 20px 20px -20px;
-}
 
-.site-desc {
-	position: absolute;
-	display: inline-block;
-	height: 100%;
-	top: 40px;
-	left: 300px;
-	color: #545454;
-}
 
 
 
@@ -2635,10 +2624,27 @@ pre{padding: 20px;}
 .span4 {
 	width: 620px;
 }
+
+
+#site-logo {
+	margin: 30px 20px 20px -20px;
+}
+
+.site-desc {
+	position: absolute;
+	display: inline-block;
+	height: 100%;
+	top: 40px;
+	left: 300px;
+	color: #545454;
+	margin-top: 10px;
+}
+
+
 #mast-nav {
 	display: inline-block;
 	float: right;
-	margin-right:-20px;
+	margin: 35px -20px 0px 0px;
 }
 
 
