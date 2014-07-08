@@ -38,6 +38,7 @@ All files, unless otherwise stated, are released under the GNU General Public Li
 body {
     overflow-x: hidden !important;
     background: #fff;
+    font-family:"メイリオ",Meiryo,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",Osaka,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
 }
 
 a, a:hover {
@@ -2638,6 +2639,7 @@ pre{padding: 20px;}
 	left: 300px;
 	color: #545454;
 	margin-top: 10px;
+	font-family:"メイリオ",Meiryo,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",Osaka,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
 }
 
 
