@@ -71,8 +71,13 @@ jQuery(document).ready(function($) {
       //Parallax Init
       $(window).stellar({
           responsive: false,
+<<<<<<< HEAD
           horizontalScrolling: false,
           parallaxBackgrounds: false,
+=======
+          horizontalScrolling: false, // from true
+          parallaxBackgrounds: false, // true
+>>>>>>> refs/heads/fix/4
           parallaxElements: true,
           hideDistantElements: true
       });
@@ -233,12 +238,14 @@ jQuery(document).ready(function($) {
   
   	$("#mast-nav li a").click(function() {
 		var _scroll_top = $($(this).attr("href")).offset().top;
+
 		$("html,body").animate({scrollTop:_scroll_top-95},"slow","swing");
 		return false;
 	});
   
   	$("#scroll_down").click(function() {
   		$("html,body").animate({scrollTop:$("#introduction-page").offset().top-95},"slow","swing");
+
 		return false;
 	});
   
