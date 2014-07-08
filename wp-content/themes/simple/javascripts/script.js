@@ -230,18 +230,18 @@ jQuery(document).ready(function($) {
   $('.blog_pagination a').addClass('btn btn-simple highlight-on-hover');
 
   
- 
+  	// custom
   
   	$("#mast-nav li a").click(function() {
 		var _scroll_top = $($(this).attr("href")).offset().top;
 
-		$("html,body").animate({scrollTop:_scroll_top-95},"slow","swing");
+		$("html,body").animate({scrollTop:_scroll_top-35},"slow","swing");
 		return false;
 	});
   
   	$("#scroll_down").click(function() {
-  		$("html,body").animate({scrollTop:$("#introduction-page").offset().top-95},"slow","swing");
-
+  		//$("html,body").animate({scrollTop:$("#introduction-page").offset().top-5},"slow","swing");
+  		$("#mast-nav li a[href=#introduction-page]").trigger("click");
 		return false;
 	});
   
@@ -250,12 +250,87 @@ jQuery(document).ready(function($) {
   	
   	$(window).resize(function() {
   		if($mast_head.is(":visible"))
-  			$top_page.css("top","95px");
+  			$top_page.css("top","35px");
   		else
   			$top_page.css("top","35px");
 	});
 
+  	
+  	
+	// navigation effects
+  	var _effects_list = ["animated","fadeInUpBig","fadeInDownBig","fadeInLeftBig","fadeInRightBig"];
+
+  	
+  	
+  	var $menu_item = $("#mast-nav li a");
+  	$menu_item.click(function() {
+  		var _href = $(this).attr("href");
+  		
+  		// clear effects
+  		$(".pages").clearEffects(_effects_list);
+  		
+  		// restart effects
+  		switch (_href) {
+		case "#top-page":
+			$(".top-page").addClass('animated fadeInUpBig');
+			break;
+		case "#introduction-page":
+			$(".introduction-page-title").addClass('animated fadeInLeftBig');
+			$(".introduction-page-subtext").addClass('animated fadeInRightBig');
+			break;
+		default:
+			break;
+		}
+  	});
+  	
+  	
+  	
 });
+
+
+
+
+
+(function($) {
+	
+	$.fn.clearEffects = function(in_array) {
+	  	this.each(function() {	  	
+	  		
+	  		if ( in_array==null ) return false;
+	  		
+			var $e = $(this);
+			var _classes = $e.classes();
+				$e.removeClass();
+
+			for (var i=0;i<_classes.length;i++) {
+				if ( in_array.indexOf(_classes[i]) == -1 ) {
+					$e.addClass(_classes[i]);
+				}
+			}
+	  	});
+	};
+	
+    $.fn.classes = function (callback) {
+        var classes = [];
+        $.each(this, function (i, v) {
+            var splitClassName = v.className.split(/\s+/);
+            for (var j in splitClassName) {
+                var className = splitClassName[j];
+                if (-1 === classes.indexOf(className)) {
+                    classes.push(className);
+                }
+            }
+        });
+        if ('function' === typeof callback) {
+            for (var i in classes) {
+                callback(classes[i]);
+            }
+        }
+        return classes;
+    };
+	
+	
+})(jQuery);
 
 
 
