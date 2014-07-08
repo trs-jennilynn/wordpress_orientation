@@ -243,6 +243,8 @@ jQuery(document).ready(function($) {
   
 	
   	$(".the-top-page").css("height",$(window).height()+5);
+  	
+  	
   	function both_head(){
 
 	  	$intro_page_container.css("width",$(window).width()*width_percentage);
@@ -286,7 +288,7 @@ jQuery(document).ready(function($) {
   	$("#scroll_down").click(function() {
   		$("#mast-nav li a[href=#introduction-page]").trigger("click").execEffects();
 		return false;
-	});
+	}).css("top",$(".the-top-page").height()*0.65);
   
   
   	
@@ -303,7 +305,6 @@ jQuery(document).ready(function($) {
 	});
 
   	
-  	
 	// navigation effects
   	$._effects_list = ["animated","fadeInUpBig","fadeInDownBig","fadeInLeftBig","fadeInRightBig"];
   	
@@ -319,10 +320,7 @@ jQuery(document).ready(function($) {
 		}
 	});
   	
-  	
-
-    
-    
+ 
     
 });
 
