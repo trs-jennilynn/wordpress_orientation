@@ -71,13 +71,9 @@ jQuery(document).ready(function($) {
       //Parallax Init
       $(window).stellar({
           responsive: false,
-<<<<<<< HEAD
-          horizontalScrolling: false,
-          parallaxBackgrounds: false,
-=======
           horizontalScrolling: false, // from true
           parallaxBackgrounds: false, // true
->>>>>>> refs/heads/fix/4
+
           parallaxElements: true,
           hideDistantElements: true
       });
