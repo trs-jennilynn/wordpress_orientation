@@ -232,6 +232,10 @@ jQuery(document).ready(function($) {
   
   	// custom
   
+  	// set the proper height of top page
+  	$(".the-top-page").css("height",$(window).height()+5);
+  
+  
   	$("#mast-nav li a").click(function() {
 		var _scroll_top = $($(this).attr("href")).offset().top;
 
@@ -245,21 +249,25 @@ jQuery(document).ready(function($) {
 	});
   
   
+
+  	// add window resize event listener
 	var $mast_head = $("#masthead"),$top_page = $("#top-page");
-  	
   	$(window).resize(function() {
+  		
+  	  	// persistent top page position
   		if($mast_head.is(":visible"))
   			$top_page.css("top","100px");
   		else
   			$top_page.css("top","35px");
+  		
+  		//  resize top page height according to the window height
+  		$(".the-top-page").css("height",$(window).height()+5);
 	});
 
   	
   	
 	// navigation effects
   	$._effects_list = ["animated","fadeInUpBig","fadeInDownBig","fadeInLeftBig","fadeInRightBig"];
-
-  	
   	
   	var $menu_item = $("#mast-nav li a");
   	$menu_item.click(function() {
@@ -274,6 +282,10 @@ jQuery(document).ready(function($) {
 	});
   	
   	
+
+    
+    
+    
 });
 
 
