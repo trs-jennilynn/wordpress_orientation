@@ -248,12 +248,12 @@ jQuery(document).ready(function($) {
   	$("#top-page").css("overflow","hidden");
   	$("#top-page .page-content").css("overflow","hidden");
   	function both_head(){
-
+  		$(".the-top-page").css("height",$(window).height()+5).css("overflow","hidden");
 	  	$intro_page_container.css("width",$(window).width()*width_percentage);
-  	}
-  	
+  	}	
   	
   	function mast_head(){
+  			$scroll_down.css("top",($(".the-top-page").height()+$mast_head.height())*0.5);
 	  	  	// persistent top page position
 			$top_page.css("top","100px");
 	  		//  resize top page height according to the window height
@@ -263,6 +263,7 @@ jQuery(document).ready(function($) {
   	}
   	
   	function mobi_head(){
+  			$scroll_down.css("top",($(".the-top-page").height()+$("#mobile-header").height())*0.5);
 			// persistent top page position
 			$top_page.css("top","35px");
 	  		//  resize top page height according to the window height
@@ -275,10 +276,10 @@ jQuery(document).ready(function($) {
   	both_head();
   	if ( $mast_head.is(":visible") ) {
   		mast_head();
-  		$scroll_down.css("top",($(window).height()-$mast_head.height())*0.75);
+  		$scroll_down.css("top",($(".the-top-page").height()+$mast_head.height())*0.5);
   	} else {
   		mobi_head();
-  		$scroll_down.css("top",($(window).height()-$("#mobile-header").height())*0.75);
+  		$scroll_down.css("top",($(".the-top-page").height()+$("#mobile-header").height())*0.5);
   	}
   	
   	
