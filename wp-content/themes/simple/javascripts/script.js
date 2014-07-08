@@ -230,14 +230,50 @@ jQuery(document).ready(function($) {
   $('.blog_pagination a').addClass('btn btn-simple highlight-on-hover');
 
   
+  
+  
   	// custom
+  	var width_percentage = 0.80;
+	var $mast_head = $("#masthead"),
+		$top_page = $("#top-page"),
+		$intro_page_gallery = $("#intro-page-gallery"),
+		$intro_gallery_img = $("#intro-page-gallery img"),
+		$intro_page_text = $("#intro-page-text"),
+		$intro_page_container = $("#intro-page-container");
   
-  	// set the proper height of top page
-  	$(".the-top-page").css("height",$(window).height()+5);
-  	$("#top-page").css("background-size","cover");
+  	function both_head(){
+	  	$(".the-top-page").css("height",$(window).height()+5);
+	  	$intro_page_container.css("width",$(window).width()*width_percentage);
+  	}
   	
   	
+  	function mast_head(){
+	  	  	// persistent top page position
+			$top_page.css("top","100px");
+	  		//  resize top page height according to the window height
+			$intro_page_gallery.css("width",$intro_page_container.width()*0.60-40).css("display","inline-block");
+			$intro_gallery_img.css("width",$intro_page_gallery.width()*0.30);
+			$intro_page_text.css("width",$intro_page_container.width()*0.40-20).css("display","inline-block");
+  	}
+  	
+  	function mobi_head(){
+			// persistent top page position
+			$top_page.css("top","35px");
+	  		//  resize top page height according to the window height
+			$intro_page_text.css("display","block").css("width","100%");
+			$intro_page_gallery.css("display","block").css("width","100%");
+			$intro_gallery_img.css("width",$intro_page_gallery.width()*0.30);
+  	}
+  	
+  	
+  	both_head();
+  	if ( $mast_head.is(":visible") )
+  		mast_head();
+  	else
+  		mobi_head();
   
+  	
+  	
   	$("#mast-nav li a").click(function() {
 		var _scroll_top = $($(this).attr("href")).offset().top;
 
@@ -251,19 +287,17 @@ jQuery(document).ready(function($) {
 	});
   
   
+  	
+  	
+  	
 
   	// add window resize event listener
-	var $mast_head = $("#masthead"),$top_page = $("#top-page");
   	$(window).resize(function() {
-  		
-  	  	// persistent top page position
+  		both_head();
   		if($mast_head.is(":visible"))
-  			$top_page.css("top","100px");
-  		else
-  			$top_page.css("top","35px");
-  		
-  		//  resize top page height according to the window height
-  		$(".the-top-page").css("height",$(window).height()+5);
+  			mast_head();	  		
+  		 else
+  			mobi_head();
 	});
 
   	
