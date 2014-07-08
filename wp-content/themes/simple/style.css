@@ -2653,6 +2653,7 @@ pre{padding: 20px;}
 
 #top-page {
 	top: 100px;
+	overflow:hidden;
 }
 
 
