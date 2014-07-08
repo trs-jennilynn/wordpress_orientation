@@ -241,8 +241,10 @@ jQuery(document).ready(function($) {
 		$intro_page_text = $("#intro-page-text"),
 		$intro_page_container = $("#intro-page-container");
   
+	
+  	$(".the-top-page").css("height",$(window).height()+5);
   	function both_head(){
-	  	$(".the-top-page").css("height",$(window).height()+5);
+
 	  	$intro_page_container.css("width",$(window).width()*width_percentage);
   	}
   	
