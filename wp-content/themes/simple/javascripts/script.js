@@ -241,8 +241,10 @@ jQuery(document).ready(function($) {
 		$intro_page_text = $("#intro-page-text"),
 		$intro_page_container = $("#intro-page-container");
   
+	
+	$(".the-top-page").css("height",$(window).height()+5);
   	function both_head(){
-	  	$(".the-top-page").css("height",$(window).height()+5);
+	  	
 	  	$intro_page_container.css("width",$(window).width()*width_percentage);
   	}
   	
@@ -251,9 +253,9 @@ jQuery(document).ready(function($) {
 	  	  	// persistent top page position
 			$top_page.css("top","100px");
 	  		//  resize top page height according to the window height
-			$intro_page_gallery.css("width",$intro_page_container.width()*0.60-50).css("display","inline-block");
+			$intro_page_gallery.css("width",$intro_page_container.width()*0.60-45).css("display","inline-block");
 			$intro_gallery_img.css("width",$intro_page_gallery.width()*0.30);
-			$intro_page_text.css("width",$intro_page_container.width()*0.40-40).css("display","inline-block");
+			$intro_page_text.css("width",$intro_page_container.width()*0.40-50).css("display","inline-block");
   	}
   	
   	function mobi_head(){
@@ -286,9 +288,6 @@ jQuery(document).ready(function($) {
 		return false;
 	});
   
-  
-  	
-  	
   	
 
   	// add window resize event listener
