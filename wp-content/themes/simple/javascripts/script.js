@@ -85,7 +85,7 @@ jQuery(document).ready(function($) {
           if (direction === 'down') 
           {
               $('#mast-nav li a').removeClass('active');
-              $('#mast-nav li a[href=#'+$(this).attr('id')+']').addClass('active'); 
+              $('#mast-nav li a[href=#'+$(this).attr('id')+']').addClass('active').execEffects(); 
               stack_top = stack_top+1; 
               page_stack[stack_top] = $(this).attr('id');
               
@@ -94,7 +94,7 @@ jQuery(document).ready(function($) {
           {
               stack_top = stack_top-1;
               $('#mast-nav li a').removeClass('active');
-              $('#mast-nav li a[href=#'+page_stack[stack_top]+']').addClass('active');
+              $('#mast-nav li a[href=#'+page_stack[stack_top]+']').addClass('active').execEffects();
               
           }
       },{ offset: 100 });
@@ -240,8 +240,7 @@ jQuery(document).ready(function($) {
 	});
   
   	$("#scroll_down").click(function() {
-  		//$("html,body").animate({scrollTop:$("#introduction-page").offset().top-5},"slow","swing");
-  		$("#mast-nav li a[href=#introduction-page]").trigger("click");
+  		$("#mast-nav li a[href=#introduction-page]").trigger("click").execEffects();
 		return false;
 	});
   
@@ -250,7 +249,7 @@ jQuery(document).ready(function($) {
   	
   	$(window).resize(function() {
   		if($mast_head.is(":visible"))
-  			$top_page.css("top","35px");
+  			$top_page.css("top","100px");
   		else
   			$top_page.css("top","35px");
 	});
@@ -258,19 +257,32 @@ jQuery(document).ready(function($) {
   	
   	
 	// navigation effects
-  	var _effects_list = ["animated","fadeInUpBig","fadeInDownBig","fadeInLeftBig","fadeInRightBig"];
+  	$._effects_list = ["animated","fadeInUpBig","fadeInDownBig","fadeInLeftBig","fadeInRightBig"];
 
   	
   	
   	var $menu_item = $("#mast-nav li a");
   	$menu_item.click(function() {
-  		var _href = $(this).attr("href");
-  		
+  		$(this).execEffects();
+  	});
+  	
+  	
+  	
+});
+
+
+// custom jQuery plug-ins
+
+
+(function($) {
+	
+	
+	$.fn.execEffects = function() {
   		// clear effects
-  		$(".pages").clearEffects(_effects_list);
+  		$(".pages").clearEffects($._effects_list);
   		
   		// restart effects
-  		switch (_href) {
+  		switch (this.attr("href")) {
 		case "#top-page":
 			$(".top-page").addClass('animated fadeInUpBig');
 			break;
@@ -281,17 +293,8 @@ jQuery(document).ready(function($) {
 		default:
 			break;
 		}
-  	});
-  	
-  	
-  	
-});
-
-
-
-
-
-(function($) {
+	};
+	
 	
 	$.fn.clearEffects = function(in_array) {
 	  	this.each(function() {	  	
