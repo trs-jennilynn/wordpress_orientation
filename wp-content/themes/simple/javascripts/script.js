@@ -251,9 +251,9 @@ jQuery(document).ready(function($) {
 	  	  	// persistent top page position
 			$top_page.css("top","100px");
 	  		//  resize top page height according to the window height
-			$intro_page_gallery.css("width",$intro_page_container.width()*0.60-40).css("display","inline-block");
+			$intro_page_gallery.css("width",$intro_page_container.width()*0.60-50).css("display","inline-block");
 			$intro_gallery_img.css("width",$intro_page_gallery.width()*0.30);
-			$intro_page_text.css("width",$intro_page_container.width()*0.40-20).css("display","inline-block");
+			$intro_page_text.css("width",$intro_page_container.width()*0.40-40).css("display","inline-block");
   	}
   	
   	function mobi_head(){
