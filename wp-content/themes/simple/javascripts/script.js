@@ -329,14 +329,14 @@ jQuery(document).ready(function($) {
   	var $menu_item = $("#mast-nav li a");
   	$menu_item.click(function() {
   		$(this).execEffects();
-  	});
+  	});*/
   	
     
     $(window).scroll(function() {
 		if ( $(this).scrollTop()<5 ) {
-			$(this).scrollTop(5);
+			return false;
 		}
-	});*/
+	});
   	
  
     
