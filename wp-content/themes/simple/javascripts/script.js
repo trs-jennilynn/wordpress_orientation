@@ -246,6 +246,7 @@ jQuery(document).ready(function($) {
 	
   	$(".the-top-page").css("height",$(window).height()+5).css("overflow","hidden");
   	$("#top-page").css("overflow","hidden");
+  	$("#top-page .page-content").css("overflow","hidden");
   	function both_head(){
 
 	  	$intro_page_container.css("width",$(window).width()*width_percentage);
