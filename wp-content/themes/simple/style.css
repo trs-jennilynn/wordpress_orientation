@@ -2598,8 +2598,20 @@ pre{padding: 20px;}
 }
 
 #site-logo {
-	margin: 20px;
+	margin: 20px 20px 20px -20px;
 }
+
+.site-desc {
+	position: absolute;
+	display: inline-block;
+	height: 100%;
+	top: 40px;
+	left: 300px;
+	color: #545454;
+}
+
+
+
 #mast-nav li a{
 	line-height:18px;
 	display: block;
@@ -2623,18 +2635,10 @@ pre{padding: 20px;}
 .span4 {
 	width: 620px;
 }
-
-.site-desc {
-	position: absolute;
-	display: inline-block;
-	height: 100%;
-	top: 40px;
-	left: 350px;
-	color: #545454;
-}
 #mast-nav {
 	display: inline-block;
 	float: right;
+	margin-right:-20px;
 }
 
 
