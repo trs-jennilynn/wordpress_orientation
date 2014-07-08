@@ -239,7 +239,8 @@ jQuery(document).ready(function($) {
 		$intro_page_gallery = $("#intro-page-gallery"),
 		$intro_gallery_img = $("#intro-page-gallery img"),
 		$intro_page_text = $("#intro-page-text"),
-		$intro_page_container = $("#intro-page-container");
+		$intro_page_container = $("#intro-page-container"),
+		$scroll_down = $("#scroll_down");
   
 	
   	$(".the-top-page").css("height",$(window).height()+5);
@@ -271,11 +272,13 @@ jQuery(document).ready(function($) {
   	
   	
   	both_head();
-  	if ( $mast_head.is(":visible") )
+  	if ( $mast_head.is(":visible") ) {
   		mast_head();
-  	else
+  		$scroll_down.css("top",($(window).height()-$mast_head.height())*0.75);
+  	} else {
   		mobi_head();
-  
+  		$scroll_down.css("top",($(window).height()-$("#mobile-header").height())*0.75);
+  	}
   	
   	
   	$("#mast-nav li a").click(function() {
@@ -285,10 +288,10 @@ jQuery(document).ready(function($) {
 		return false;
 	});
   
-  	$("#scroll_down").click(function() {
+  	$scroll_down.click(function() {
   		$("#mast-nav li a[href=#introduction-page]").trigger("click").execEffects();
 		return false;
-	}).css("top",$(".the-top-page").height()*0.65);
+	});
   
   
   	
