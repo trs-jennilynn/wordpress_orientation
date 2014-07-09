@@ -241,12 +241,28 @@ jQuery(document).ready(function($) {
 		$intro_page_text = $("#intro-page-text"),
 		$intro_page_container = $("#intro-page-container"),
 		$scroll_down = $("#scroll_down"),
-		$menu_item = $("#mast-nav li a");
+		$menu_item = $("#mast-nav li a"),
+		$course_page_gallery_entry = $("#course-page-gallery .entry");
   
 	
   	$(".the-top-page").css("height",$(window).height()+5).css("overflow","hidden");
   	$("#top-page").css("overflow","hidden");
   	$("#top-page .page-content").css("overflow","hidden");
+  	$(".page-section").css("background-size","cover");
+  	
+  	
+  	// course page on image hover transition
+ 	
+  	$course_page_gallery_entry.mouseenter(function() {
+  		$(this).find(".hover").stop().animate({opacity:1},"normal","swing");
+	}).mouseout(function() {
+		$(this).find(".hover").stop().animate({opacity:0},"normal","swing");
+	});
+  	
+  	
+  	
+  	
+  	
   	function both_head(){
   		$(".the-top-page").css("height",$(window).height()+5).css("overflow","hidden");
 	  	$intro_page_container.css("width",$(window).width()*width_percentage);
@@ -262,6 +278,7 @@ jQuery(document).ready(function($) {
 			$intro_page_text.css("width",$intro_page_container.width()*0.40-40).css("display","inline-block");
   	}
   	
+  	// let's be responsive...
   	function mobi_head(){
   			$scroll_down.css("top",($(".the-top-page").height()+$("#mobile-header").height())*0.5);
 			// persistent top page position
@@ -360,6 +377,10 @@ jQuery(document).ready(function($) {
 			$(".introduction-page-title").addClass('animated fadeInLeftBig');
 			$(".introduction-page-subtext").addClass('animated fadeInRightBig');
 			break;
+		case "#course-page":
+			$(".course-page-title").addClass('animated fadeInRightBig');
+			$(".course-page-subtext").addClass('animated fadeInLeftBig');
+			break;	
 		default:
 			break;
 		}

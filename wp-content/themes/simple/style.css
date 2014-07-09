@@ -2663,3 +2663,10 @@ pre{padding: 20px;}
 	display: inline-block;
 	padding: 5px;
 }
+
+#course-page-gallery .hover {
+	opacity: 0;
+	position: relative;
+	top: -252px;
+	z-index:1;
+}
