@@ -2648,6 +2648,11 @@ pre{padding: 20px;}
 	margin: 35px -20px 0px 0px;
 }
 
+.page-section {
+	font-family: "メイリオ",Meiryo,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",Osaka,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
+}
+
+
 
 #top-page {
 	top: 100px;
@@ -2670,3 +2675,4 @@ pre{padding: 20px;}
 	top: -252px;
 	z-index:1;
 }
+

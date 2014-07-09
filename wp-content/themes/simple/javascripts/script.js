@@ -242,7 +242,10 @@ jQuery(document).ready(function($) {
 		$intro_page_container = $("#intro-page-container"),
 		$scroll_down = $("#scroll_down"),
 		$menu_item = $("#mast-nav li a"),
-		$course_page_gallery_entry = $("#course-page-gallery .entry");
+		$course_page_gallery_entry = $("#course-page-gallery .entry"),
+		$news_page_container = $("#news-page-container"),
+		$news_page_text = $("#news-page-text"),
+		$news_page_news = $("#news-page-news");
   
 	
   	$(".the-top-page").css("height",$(window).height()+5).css("overflow","hidden");
@@ -266,16 +269,21 @@ jQuery(document).ready(function($) {
   	function both_head(){
   		$(".the-top-page").css("height",$(window).height()+5).css("overflow","hidden");
 	  	$intro_page_container.css("width",$(window).width()*width_percentage);
+	  	$news_page_container.css("width",$(window).width()*width_percentage);
   	}	
   	
   	function mast_head(){
   			$scroll_down.css("top",($(".the-top-page").height()+$mast_head.height())*0.5);
 	  	  	// persistent top page position
 			$top_page.css("top","100px");
-	  		//  resize top page height according to the window height
+	  		//  resize intro page height according to the window height
 			$intro_page_gallery.css("width",$intro_page_container.width()*0.60-50).css("display","inline-block");
 			$intro_gallery_img.css("width",$intro_page_gallery.width()*0.30);
 			$intro_page_text.css("width",$intro_page_container.width()*0.40-40).css("display","inline-block");
+			// resize news page
+			$news_page_news.css("width",$intro_page_container.width()*0.70-200).css("display","inline-block");
+			$news_page_text.css("width",$intro_page_container.width()*0.30-0).css("display","inline-block");
+			
   	}
   	
   	// let's be responsive...
@@ -283,10 +291,13 @@ jQuery(document).ready(function($) {
   			$scroll_down.css("top",($(".the-top-page").height()+$("#mobile-header").height())*0.5);
 			// persistent top page position
 			$top_page.css("top","35px");
-	  		//  resize top page height according to the window height
+	  		//  resize intro page height according to the window height
 			$intro_page_text.css("display","block").css("width","100%");
 			$intro_page_gallery.css("display","block").css("width","100%");
 			$intro_gallery_img.css("width",$intro_page_gallery.width()*0.30);
+			// resize news page
+			$news_page_text.css("display","block").css("width","100%");
+			$news_page_news.css("display","block").css("width","100%");
   	}
   	
   	
@@ -381,6 +392,11 @@ jQuery(document).ready(function($) {
 			$(".course-page-title").addClass('animated fadeInRightBig');
 			$(".course-page-subtext").addClass('animated fadeInLeftBig');
 			break;	
+		case "#news-page":
+			$(".news-page-title").addClass('animated fadeInLeftBig');
+			$(".news-page-subtext").addClass('animated fadeInRightBig');
+			break;			
+			
 		default:
 			break;
 		}
