@@ -2668,4 +2668,5 @@ pre{padding: 20px;}
 	opacity: 0;
 	position: relative;
 	top: -252px;
+	z-index:1;
 }
